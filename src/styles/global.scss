@@ -1,0 +1,101 @@
+@import "@/styles/variables.scss";
+
+// 去除输入框的默认样式
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+// 禁用文字选择
+.no-select {
+    user-select: none;
+}
+
+// 允许文本换行
+.allow-wrap {
+    white-space: pre-wrap;
+}
+
+// 调整 Ant Design Drawer 的样式
+.ant-drawer-body {
+    padding: 0;
+}
+
+// 隐藏 Ant Design Menu Submenu 中的箭头，并取消标题的鼠标样式
+.ant-menu-submenu {
+    &-arrow {
+        display: none;
+    }
+
+    &-title {
+        cursor: unset;
+    }
+}
+
+// 主要的样式块
+.main {
+    .card {
+        padding: 32px 0;
+        background-color: #ffffff;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+
+        &__head {
+            flex: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            padding: 0 30.5px;
+        }
+
+        &__description {
+            font-size: $app-size-text;
+            color: $app-color-gray2;
+            margin-top: -6px;
+            margin-bottom: 12px;
+            padding: 0 30.5px;
+        }
+
+        &__content {
+            padding: 0 30.5px 0 30.5px;
+        }
+
+        &--shadow {
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .head {
+        &__title {
+            margin-right: 5px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+// 在屏幕宽度小于等于 768px 时生效的响应式样式
+@media (max-width: 768px) {
+    .home {
+        .card {
+            padding: 20px 0;
+
+            &__head {
+                padding: 0 20px;
+            }
+
+            &__description {
+                padding: 0 20px;
+            }
+
+            &__content {
+                padding: 0 20px 0 20px;
+            }
+        }
+    }
+}
