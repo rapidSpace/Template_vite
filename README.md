@@ -1,18 +1,46 @@
-# Vue 3 + TypeScript + Vite
+# Vue3 + TypeScript + Vite 模板项目
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+这是一个基于 **Vue 3 + TypeScript + Vite** 的前端项目模板，内置常用开发配置和工具，开箱即用。适合用于中大型项目的快速启动和二次开发。
 
-## Recommended IDE Setup
+## 🚀 技术栈
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- [Vue 3](https://vuejs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Pinia](https://pinia.vuejs.org/) - 状态管理
+- [Vue Router](https://router.vuejs.org/) - 路由管理
+- [Axios](https://axios-http.com/) - 封装请求，支持 Token 鉴权与无感刷新
+- [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/) - 代码规范
+- [Husky](https://typicode.github.io/husky) + lint-staged - Git 提交检查
+- 全局样式和 CSS 变量配置
 
-## Type Support For `.vue` Imports in TS
+## 📦 安装依赖
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+使用 `pnpm`（推荐）或 `npm` 安装依赖：
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+```bash
+# 使用 pnpm（推荐）
+pnpm install
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+# 或使用 npm
+npm install
+```
+🧩 启动开发环境
+```bash
+# 使用 pnpm
+pnpm run dev
+
+# 或使用 npm
+npm run dev
+```
+
+## ✅ 特性介绍
+- ✅ Axios 封装：支持 token 自动携带、刷新机制、错误处理统一
+
+- ✅ 路由模块化：支持多级路由，权限控制可拓展
+
+- ✅ 状态管理：使用 Pinia 替代 Vuex，模块划分清晰
+
+- ✅ 代码规范：支持 ESLint + Prettier 格式化，Git 提交前自动检查
+
+- ✅ 开发体验优秀：Vite 极速冷启动 + HMR 热更新
